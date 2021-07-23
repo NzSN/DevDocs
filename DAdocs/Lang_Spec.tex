@@ -7,6 +7,7 @@ We are aim to build up a systemt that perform testcase which \\
 specify by a script.
 
 And there is some problems need to be solved:
+
 \begin{itemize}
 \item What is your script look like ?
 \item What scenes ?
@@ -14,6 +15,23 @@ And there is some problems need to be solved:
 \end{itemize}
 
 \section{Language Definition}
+Name that language as DA. \\
+
+First, let's look at what we want to describe by DA. Testcase, a script about \\
+how to do a test, is the thing that we want to describe by DA. Testcase use collection
+of executors to communicate with DUT and then give assertion about result by status
+of executors, DUT.
+
+so DA should be able to describe how executors and DUT do action and query status from
+them.
+
+We are able to do thoses things by python, python has many libs with these libs
+we are able to perform computation on python side easily. But python's performance
+is a problem, some test may require low latency.
+
+A solution is to compile python script into another form so that it able to
+executed by a well-performance system.
+
 
 
 
